@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vk1-Fh-41K">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6lX-o1-byQ">
+            <objects>
+                <tableViewController id="vk1-Fh-41K" customClass="ViewController" customModule="InlinePickerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="mCP-mZ-d6P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="NormalCell" textLabel="GId-TR-7ad" style="IBUITableViewCellStyleDefault" id="eNL-Wi-zpd">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eNL-Wi-zpd" id="XxM-C6-BfW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GId-TR-7ad">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PickerCell" rowHeight="260" id="Dpk-6E-5Qr" customClass="PickerCell" customModule="InlinePickerSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="99" width="414" height="260"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dpk-6E-5Qr" id="w37-dI-gJ8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dO-wk-wM7" userLabel="Container View">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZq-w3-i2n">
+                                                    <rect key="frame" x="16" y="0.0" width="382" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" priority="999" constant="44" identifier="cellheight" id="vne-0N-JrP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="0r2-js-VYs">
+                                                    <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="216" id="5RU-kF-Mn4"/>
+                                                    </constraints>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="0r2-js-VYs" secondAttribute="trailing" id="QJT-6s-D9d"/>
+                                                <constraint firstAttribute="height" priority="999" constant="260" id="VVS-ph-uCj"/>
+                                                <constraint firstAttribute="trailing" secondItem="jZq-w3-i2n" secondAttribute="trailing" constant="16" id="W9e-sf-xph"/>
+                                                <constraint firstItem="0r2-js-VYs" firstAttribute="leading" secondItem="3dO-wk-wM7" secondAttribute="leading" id="cI7-AY-gyS"/>
+                                                <constraint firstItem="jZq-w3-i2n" firstAttribute="top" secondItem="3dO-wk-wM7" secondAttribute="top" id="dFE-2u-4Eu"/>
+                                                <constraint firstItem="0r2-js-VYs" firstAttribute="top" secondItem="jZq-w3-i2n" secondAttribute="bottom" id="lDc-bp-XPc"/>
+                                                <constraint firstItem="jZq-w3-i2n" firstAttribute="leading" secondItem="3dO-wk-wM7" secondAttribute="leading" constant="16" id="m2P-ID-Ic7"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3dO-wk-wM7" firstAttribute="top" secondItem="w37-dI-gJ8" secondAttribute="top" id="94Q-Mk-Yy7"/>
+                                        <constraint firstItem="3dO-wk-wM7" firstAttribute="leading" secondItem="w37-dI-gJ8" secondAttribute="leading" id="LGm-es-buE"/>
+                                        <constraint firstAttribute="bottom" secondItem="3dO-wk-wM7" secondAttribute="bottom" id="QXt-Pa-GfT"/>
+                                        <constraint firstAttribute="trailing" secondItem="3dO-wk-wM7" secondAttribute="trailing" id="acn-Oa-fmc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="containerViewHeight" destination="VVS-ph-uCj" id="f7t-nf-Qhv"/>
+                                    <outlet property="datePicker" destination="0r2-js-VYs" id="o3J-f4-exk"/>
+                                    <outlet property="label" destination="jZq-w3-i2n" id="DYV-fc-230"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vk1-Fh-41K" id="OeX-RW-x5E"/>
+                            <outlet property="delegate" destination="vk1-Fh-41K" id="tNa-II-JM6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xj7-u4-sd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
